@@ -1,4 +1,6 @@
-# Deploy Simple API to Lambda Using CDK
+# Simple Go API
+
+Deploy GO function to [Lambda](https://aws.amazon.com/lambda/) using [CDK](https://aws.amazon.com/cdk/).
 
 ## Build
 
