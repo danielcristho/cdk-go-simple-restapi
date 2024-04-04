@@ -24,6 +24,18 @@ make setup
 make build
 ```
 
+After the deployment is successful, testing the API:
+
+```bash
+curl https://<api_gateway_url>/prod/hello-world
+```
+
+Response:
+
+```json
+{"Greeting":"Hello From API!"}
+```
+
 ## CDK
 
 The `cdk.json` file tells the CDK toolkit how to execute your app.

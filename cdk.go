@@ -21,11 +21,12 @@ func NewAppServerlessCdkGoStack(scope constructs.Construct, id string, props *Ap
 	stack := awscdk.NewStack(scope, &id, &sprops)
 
 	getHandler := awscdklambdagoalpha.NewGoFunction(stack, jsii.String("myGoHandler"), &awscdklambdagoalpha.GoFunctionProps{
-		Runtime: awslambda.Runtime_PROVIDED_AL2(),
-		Entry:   jsii.String("./api"),
+		Runtime: awslambda.Runtime_PROVIDED_AL2(), // using amazon linux as runtime
+		Entry:   jsii.String("./api"),             // main.go path
 		Bundling: &awscdklambdagoalpha.BundlingOptions{
 			GoBuildFlags: jsii.Strings(`-ldflags "-s -w"`),
 		},
+		FunctionName: jsii.String("lambda-rest-api"), // function name
 	})
 
 	restApi := awsapigateway.NewRestApi(stack, jsii.String("myGoApi"), &awsapigateway.RestApiProps{
