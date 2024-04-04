@@ -1,16 +1,30 @@
-# Simple Go API
+# Simple Go REST API
 
 Deploy GO function to [Lambda](https://aws.amazon.com/lambda/) using [CDK](https://aws.amazon.com/cdk/).
+
+## Installation
+
+```bash
+git clone https://github.com/danielcristho/cdk-simple-go-restapi.git
+```
+
+```bash
+make install
+```
+
+Or
+
+```bash
+make setup
+```
 
 ## Build
 
 ```bash
-git clone https://github.com/danielcristho/simple-go-api.git
+make build
 ```
 
-```bash
-go mod tidy
-```
+## CDK
 
 The `cdk.json` file tells the CDK toolkit how to execute your app.
 
